@@ -1,0 +1,10 @@
+name: Work 1 Bris
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Something
+        run: echo "Hallo!"
