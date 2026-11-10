@@ -1,0 +1,21 @@
+on: push
+jobs:
+    build-node:
+        runs-on: ubuntu-latest
+        cointainer: node:24
+
+        steps:
+         - name: verificar entorno
+           run: |
+            echo "Ejecutando dentro de docker"
+            node -v
+            npm -v
+
+         - name: Desgargar repositorio
+           uses: actions/checkout@v4
+        
+         - name: Desgargar dependencias
+           run: npm ci
+
+         - name: Ejecutar aplicación
+           run: node app.js
