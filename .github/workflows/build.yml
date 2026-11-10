@@ -2,7 +2,7 @@ on: push
 jobs:
     build-node:
         runs-on: ubuntu-latest
-        cointainer: node:24
+        container: node:24
 
         steps:
          - name: verificar entorno
